@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/*!
+ * Version - 0.1.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ * Copyleft 2019-2020 ljaraque
+ */
+
+:root {
+  --text-color-hover: rgb(226, 43, 171);
+  --bg-color-hover:rgb(248, 255, 182);
+  --body-max-width: 1300px;
+}
+
+html *
+{
+    /*font-size: 22px;*/
+    /*font-family: monospace !important;*/
+}
+
+body{
+    background-color: #fff;
+    color: #222;
+    padding: 0px 0 0;
+}
+
+
+h4{
+    display: block;
+    font-family: Arial;
+    font-size: 2.5vh;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+h1 { 
+    display: block;
+    font-size: 8vh;
+    font-family: oblique;
+    margin: 0px 5px 5px 0px;
+    font-weight: bold;
+    text-align: center;
+    background-color: lightgray;
+    padding: 20px;
+    border: 5px dashed blueviolet;
+    border-radius: 30px;
+    background-image: url("https://images.pexels.com/photos/139321/pexels-photo-139321.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); 
+    background-repeat: repeat; 
+    background-color: #eaeaea;
+    background-clip: padding-box; 
+
+}
+
+p{
+    margin: 0 0 0 0;
+    font-size:0.9em;
+    color: #444;
+}
+
+ul, ol{
+    display: block;
+    /*list-style-type: disc;*/
+    margin: 5px 0px 5px 0px;
+    padding-left: 20px;
+    font-size:0.9em;
+    color: #444;
+}
+
+ul ul{
+    font-size:1em;
+    margin: 0 0 0 0px;
+    padding: 0 0 0 10px;
+    list-style-type: dash;
+}
+
+hr{
+    border-top: 2px solid #bbb;
+}
+
+.grid{
+    width: 90%;
+    max-width: var(--body-max-width);
+    margin:70px
+     auto;
+    background-color: #fcfcfc;
+    padding: 10px 0 10px 0;
+}
+
+.card{
+    background-color: lightblue;
+    display: block;
+    padding: 10px 10px 10px 10px;
+    font-size: 2.3vh;
+    text-align: justify;
+    margin: 10px 10px 10px 10px;
+    border: 1px solid #ddd;
+    height: 200px; 
+    overflow: auto;
+    border-radius: 4px;
+}
+
+.card:hover{
+    background-color: var(--bg-color-hover);
+    color: var(--text-color-hover);
+    border: 1px solid blueviolet;
+    border-radius: 20px;
+}
+
+.card hr{
+    border-top: 1px solid #bbb;
+}
+
+.card li {
+    padding: 5px 0px;
+    font-style: italic;
+}
+.card:hover hr{
+    border-top: 1px solid var(--text-color-hover);
+}
+
+.card:hover ul{
+    color: var(--text-color-hover);
+}
+
+.card:hover p{
+    color: var(--text-color-hover);
+}
+
+.gutter{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.col-25{
+    width: 25%;
+    float: left;
+}
+
+.col-33{
+    width: 33.3%;
+    float: left;
+}
+.col-50{
+    width: 50%;
+    float: left;
+}
+
+.clear{
+    clear: both;
+    display: block;
+}
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ccc; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: lightblue; 
+}
+
+/* Style the footer */
+.footer {
+    max-width: var(--body-max-width);
+    background-color:lightpink;
+    padding: 13px 0 13px 0;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Courier;
+    font-size: 3.5vh;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
+
+.footer p {
+    color: blueviolet;
+}
+
+nav {
+    background-color:lightpink;
+    font-size: 3.5vh;
+    font-family: Arial;
+    padding: 30px 10px 30px;
+    text-align:center;
+    border: 5px solid blueviolet;
+    border-radius: 100px;
+}
+
+
+/*responsive*/
+@media all and (max-width:1000px) {
+    .col-25{
+        width: 50%;
+    }
+}
+
+@media all and (max-width:800px) {
+    .col-33{
+        width: 50%;
+    }
+    .col-25{
+        width: 50%;
+    }
+}
+
+@media all and (max-width:600px) {
+    .col-50, .col-33, .col-25{
+        width: 100%;
+        float: none;
+    }
+}
+
